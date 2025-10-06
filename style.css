@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #e0f7fa, #f0f9ff);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: #2c3e50;
+}
+
+.container {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 24px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 520px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #2c3e50;
+  letter-spacing: 0.5px;
+}
+
+.input-box {
+  background: linear-gradient(145deg, #fffbe6, #fff8e1);
+  padding: 25px;
+  border-radius: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.input-box:hover {
+  transform: translateY(-2px);
+}
+
+.input-box input {
+  width: 100%;
+  padding: 16px 20px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 16px;
+  font-size: 16px;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.input-box input:focus {
+  outline: none;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1), 0 0 0 3px rgba(255, 204, 0, 0.3);
+  transform: scale(1.02);
+}
+
+.input-box button {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, #2c3e50, #1a252f);
+  color: white;
+  border: none;
+  border-radius: 16px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.input-box button:hover {
+  background: linear-gradient(135deg, #1a252f, #0d131a);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.input-box button:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Kontaktlar ro'yxati */
+.contact-list {
+  list-style: none;
+  text-align: left;
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 0;
+}
+
+.contact-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: #fafafa;
+  margin-bottom: 12px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s ease;
+  border-left: 5px solid #ffcc00;
+}
+
+.contact-item:hover {
+  background: #fffde7;
+  transform: translateX(5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.contact-info {
+  flex: 1;
+  font-size: 16px;
+  word-break: break-all;
+}
+
+.contact-actions {
+  display: flex;
+  gap: 8px;
+  margin-left: 12px;
+}
+
+.contact-actions button {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  font-weight: bold;
+}
+
+.edit-btn {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.edit-btn:hover {
+  background: #bbdefb;
+  transform: scale(1.1);
+}
+
+.delete-btn {
+  background: #ffebee;
+  color: #d32f2f;
+}
+
+.delete-btn:hover {
+  background: #ffcdd2;
+  transform: scale(1.1);
+}
+
+/* Scrollbar */
+.contact-list::-webkit-scrollbar {
+  width: 8px;
+}
+.contact-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+.contact-list::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 10px;
+}
+.contact-list::-webkit-scrollbar-thumb:hover {
+  background: #bbb;
+}
+
+/* Animatsiya */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contact-item {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* Responsivlik */
+@media (max-width: 520px) {
+  .container {
+    padding: 25px 15px;
+  }
+  .contact-actions {
+    gap: 6px;
+  }
+  .contact-actions button {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+}
